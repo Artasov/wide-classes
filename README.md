@@ -1,3 +1,3 @@
-<img height="83" src="logo.png" width="83"/>
+<img height="85" src="logo.png" width="85"/>
 
 # [DOCS](https://artasov.github.io/wide-classes/)

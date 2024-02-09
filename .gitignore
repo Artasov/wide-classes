@@ -26,3 +26,4 @@ env.bak/
 venv.bak/
 bootstrap.min.css
 **.map
+**.psd

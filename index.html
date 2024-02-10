@@ -122,13 +122,26 @@
 
 
     <section>
-        <h3 class="fw-4 fs-4 mb-3">
-            Some classes:
+        <h3 class="fw-5 fs-4 mb-3 text-center">
+            Classes
         </h3>
-        <div class="ps-0 ps-sm-4">
+        <div>
+            <ul class="fs-6 frc flex-wrap gap-2 mx-auto" style="max-width: 400px;">
+                <li><a class="text-success" href="#Layout">Layout</a></li>
+                <li><a class="text-success" href="#Will-need">Will need</a></li>
+                <li><a class="text-success" href="#Size">Size</a></li>
+                <li><a class="text-success" href="#Text">Text</a></li>
+                <li><a class="text-success" href="#Position">Position</a></li>
+                <li><a class="text-success" href="#Transform">Transform</a></li>
+                <li><a class="text-success" href="#Hover">Hover</a></li>
+                <li><a class="text-success" href="#Border">Border</a></li>
+                <li><a class="text-success" href="#Background">Background</a></li>
+                <li><a class="text-success" href="#Filter">Filter</a></li>
+                <li><a class="text-success" href="#Transition">Transition</a></li>
+            </ul>
             <div class="divider-100 bg-black-20 mb-3 mt-4"></div>
             <div>
-                <h4 class="fw-4 fs-5">Layout</h4>
+                <h4 class="fw-4 fs-5" id="Layout">Layout</h4>
                 <ul class="fs-5 ps-4 frsc gap-1 flex-wrap">
                     <li>
                         <span class="fw-5 badge enable-tap-select-all
@@ -246,7 +259,7 @@
             <div class="divider-100 bg-black-20 mb-3 mt-4"></div>
 
             <div>
-                <h4 class="fw-4 fs-5">Will need</h4>
+                <h4 class="fw-4 fs-5" id="Will-need">Will need</h4>
                 <ul class="fs-5 ps-4 frsc gap-1 flex-wrap">
                     <li>
                         <span class="fw-5 badge enable-tap-select-all
@@ -264,9 +277,24 @@
                     </li>
                     <li>
                         <span class="fw-5 badge enable-tap-select-all
-                            text-bg-success bg-opacity-75">ratio-2-1</span>
+                            text-bg-success bg-opacity-75">disable-tap-select</span>
                         <div class="mt-1 fs-6 fcc ps-2" style="line-height: 1em">
-                            <span>height: min-content</span>
+                            <span>Disable tap highlighting and user select.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="fw-5 badge enable-tap-select-all
+                            text-bg-success bg-opacity-75">enable-tap-select-text</span>
+                        <div class="mt-1 fs-6 fcc ps-2" style="line-height: 1em">
+                            <span>Enable tap highlighting and user select.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="fw-5 badge enable-tap-select-all
+                            text-bg-success bg-opacity-75">enable-tap-select-all</span>
+                        <div class="mt-1 fs-6 fcc ps-2" style="line-height: 1em">
+                            <span>Enable tap highlighting and user select.</span>
+                            <span>user-select: all</span>
                         </div>
                     </li>
 
@@ -275,6 +303,10 @@
                         <div class="frs gap-1 flex-wrap">
                             <span class="fw-5 badge enable-tap-select-all
                             text-bg-success bg-opacity-75">pointer-events-none</span>
+                            <span class="fw-5 badge enable-tap-select-all
+                            text-bg-success bg-opacity-75">ratio-2-1</span>
+                            <span class="fw-5 badge enable-tap-select-all
+                            text-bg-success bg-opacity-75">ratio-1-2</span>
                         </div>
                     </li>
                 </ul>
@@ -283,7 +315,7 @@
             <div class="divider-100 bg-black-20 mb-3 mt-4"></div>
 
             <div>
-                <h4 class="fw-4 fs-5">Size</h4>
+                <h4 class="fw-4 fs-5" id="Size">Size</h4>
                 <ul class="fs-5 ps-4 frsc gap-1 flex-wrap">
                     <li>
                         <span class="fw-5 badge enable-tap-select-all
@@ -363,7 +395,7 @@
             <div class="divider-100 bg-black-20 mb-3 mt-4"></div>
 
             <div>
-                <h4 class="fw-4 fs-5">Text</h4>
+                <h4 class="fw-4 fs-5" id="Text">Text</h4>
                 <ul class="fs-5 ps-4 frsc gap-1 flex-wrap">
                     <li>
                         <span class="fr gap-1">
@@ -407,7 +439,7 @@
             <div class="divider-100 bg-black-20 mb-3 mt-4"></div>
 
             <div>
-                <h4 class="fw-4 fs-5">Position</h4>
+                <h4 class="fw-4 fs-5" id="Position">Position</h4>
                 <ul class="fs-5 ps-4 frsc gap-1 flex-wrap">
                     <li class="fc gap-1">
                         <span class="fr gap-1">
@@ -448,7 +480,7 @@
             <div class="divider-100 bg-black-20 mb-3 mt-4"></div>
 
             <div>
-                <h4 class="fw-4 fs-5">Transform</h4>
+                <h4 class="fw-4 fs-5" id="Transform">Transform</h4>
                 <ul class="fs-5 ps-4 frsc gap-1 flex-wrap">
                     <li>
                         <span class="fw-5 badge enable-tap-select-all-all text-bg-success bg-opacity-75">invert-h</span>
@@ -468,7 +500,7 @@
             <div class="divider-100 bg-black-20 mb-3 mt-4"></div>
 
             <div>
-                <h4 class="fw-4 fs-5">Hover</h4>
+                <h4 class="fw-4 fs-5" id="Hover">Hover</h4>
                 <ul class="fs-5 ps-4 frsc gap-1 flex-wrap">
                     <li>
                         <span class="fw-5 badge enable-tap-select-all-all text-bg-success bg-opacity-75">hover-scale-20</span>
@@ -494,7 +526,7 @@
             <div class="divider-100 bg-black-20 mb-3 mt-4"></div>
 
             <div>
-                <h4 class="fw-4 fs-5">Border</h4>
+                <h4 class="fw-4 fs-5" id="Border">Border</h4>
                 <ul class="fs-5 ps-4 frsc gap-1 flex-wrap">
                     <!-- Example for border-black-10 and subsequent -->
                     <li>
@@ -515,7 +547,7 @@
             <div class="divider-100 bg-black-20 mb-3 mt-4"></div>
 
             <div>
-                <h4 class="fw-4 fs-5">Background</h4>
+                <h4 class="fw-4 fs-5" id="Background">Background</h4>
                 <ul class="fs-5 ps-4 frsc gap-1 flex-wrap">
                     <li>
                         <span class="fr gap-1">
@@ -542,7 +574,7 @@
 
 
             <div>
-                <h4 class="fw-4 fs-5">Filter</h4>
+                <h4 class="fw-4 fs-5" id="Filter">Filter</h4>
                 <ul class="fs-5 ps-4 frsc gap-1 flex-wrap">
                     <li>
                         <span class="fr gap-1">
@@ -562,7 +594,7 @@
             <div class="divider-100 bg-black-20 mb-3 mt-4"></div>
 
             <div>
-                <h4 class="fw-4 fs-5">Transition</h4>
+                <h4 class="fw-4 fs-5" id="Transition">Transition</h4>
                 <ul class="fs-5 ps-4 frsc gap-1 flex-wrap">
                     <li>
                         <span class="fr gap-1">

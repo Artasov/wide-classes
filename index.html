@@ -7,7 +7,9 @@
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN " crossorigin="anonymous">
     <!--    <link rel="stylesheet" href="bootstrap.min.css">-->
     <link rel="stylesheet" href="wide-classes.css">
+    <script src="js/device-classifier-sensor.js"></script>
     <link type="image/x-icon" rel="shortcut icon" href="logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <header class="frc py-3 bg-success
@@ -244,6 +246,43 @@
             <div class="divider-100 bg-black-20 mb-3 mt-4"></div>
 
             <div>
+                <h4 class="fw-4 fs-5">Will need</h4>
+                <ul class="fs-5 ps-4 frsc gap-1 flex-wrap">
+                    <li>
+                        <span class="fw-5 badge
+                            text-bg-success bg-opacity-75">no-scrollbar</span>
+                        <div class="mt-1 fs-6 fcc ps-2" style="line-height: 1em">
+                            <span>Doesn't prohibit scrolling, just hides the scrollbar.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="fw-5 badge
+                            text-bg-success bg-opacity-75">ratio-1-1</span>
+                        <div class="mt-1 fs-6 fcc ps-2" style="line-height: 1em">
+                            <span>aspect-ratio: 1 / 1</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="fw-5 badge
+                            text-bg-success bg-opacity-75">ratio-2-1</span>
+                        <div class="mt-1 fs-6 fcc ps-2" style="line-height: 1em">
+                            <span>height: min-content</span>
+                        </div>
+                    </li>
+
+                    <li class="fcc w-100">
+                        <span class="mb-2">Other</span>
+                        <div class="frs gap-1 flex-wrap">
+                            <span class="fw-5 badge
+                            text-bg-success bg-opacity-75">pointer-events-none</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="divider-100 bg-black-20 mb-3 mt-4"></div>
+
+            <div>
                 <h4 class="fw-4 fs-5">Size</h4>
                 <ul class="fs-5 ps-4 frsc gap-1 flex-wrap">
                     <li>
@@ -471,6 +510,47 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="divider-100 bg-black-20 mb-3 mt-4"></div>
+
+            <div>
+                <h4 class="fw-4 fs-5">Transition</h4>
+                <ul class="fs-5 ps-4 frsc gap-1 flex-wrap">
+                    <li>
+                        <span class="fw-5 badge text-bg-success bg-opacity-75">
+                            transition-d-50 ... transition-d-5000
+                        </span>
+                        <div class="mt-1 fs-6 fcc ps-2" style="line-height: 1em">
+                            <span>Transition duration 50, 100, 150, 200, 300, 400, 500, 1000, 2000, 5000 ms</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="fw-5 badge text-bg-success bg-opacity-75">
+                            transition-tf-l</span>
+                        <span class="fw-5 badge text-bg-success bg-opacity-75">
+                            transition-tf-e</span>
+                        <span class="fw-5 badge text-bg-success bg-opacity-75">
+                            transition-tf-ei</span>
+                        <span class="fw-5 badge text-bg-success bg-opacity-75">
+                            transition-tf-eo</span>
+                        <span class="fw-5 badge text-bg-success bg-opacity-75">
+                            transition-tf-eio</span>
+                        <div class="mt-1 fs-6 fcc ps-2" style="line-height: 1em">
+                            <span>Transition timing funcs: linear, ease, ease-in, ease-out, ease-in-out</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="fw-5 badge text-bg-success bg-opacity-75">
+                            transition-all
+                        </span>
+                        <div class="mt-1 fs-6 fcc ps-2" style="line-height: 1em">
+                            <span>transition-property: all</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
         </div>
     </section>
 </main>

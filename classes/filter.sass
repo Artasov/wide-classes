@@ -1,29 +1,3 @@
-.invert-100
-  filter: invert(1)
-
-.invert-90
-  filter: invert(.9)
-
-.invert-80
-  filter: invert(.8)
-
-.invert-70
-  filter: invert(.7)
-
-.invert-60
-  filter: invert(.6)
-
-.invert-50
-  filter: invert(.5)
-
-.invert-40
-  filter: invert(.4)
-
-.invert-30
-  filter: invert(.3)
-
-.invert-20
-  filter: invert(.2)
-
-.invert-10
-  filter: invert(.1)
+@for $i from 0 through 20
+  .invert-#{5 * $i}
+    filter: invert((5 * $i) * 1%)

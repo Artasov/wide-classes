@@ -1,47 +1,34 @@
-.transition-d-50
-  transition-duration: 50ms
+@for $i from 0 through 2
+  .transition-d-#{50 * $i}
+    transition-duration: #{50 * $i}ms !important
 
-.transition-d-100
-  transition-duration: 100ms
+@for $i from 2 through 20
+  .transition-d-#{100 * $i}
+    transition-duration: #{100 * $i}ms !important
 
-.transition-d-150
-  transition-duration: 150ms
+@for $i from 10 through 20
+  .transition-d-#{200 * $i}
+    transition-duration: #{200 * ($i - 5)}ms !important
 
-.transition-d-200
-  transition-duration: 200ms
+@for $i from 2 through 10
+  .transition-d-#{1000 * $i}
+    transition-duration: #{1000 * $i}ms !important
 
-.transition-d-300
-  transition-duration: 300ms
-
-.transition-d-400
-  transition-duration: 400ms
-
-.transition-d-500
-  transition-duration: 500ms
-
-.transition-d-1000
-  transition-duration: 1000ms
-
-.transition-d-2000
-  transition-duration: 1000ms
-
-.transition-d-5000
-  transition-duration: 1000ms
 
 .transition-tf-eio
-  transition-timing-function: ease-in-out
+  transition-timing-function: ease-in-out !important
 
 .transition-tf-e
-  transition-timing-function: ease
+  transition-timing-function: ease !important
 
 .transition-tf-ei
-  transition-timing-function: ease-in
+  transition-timing-function: ease-in !important
 
 .transition-tf-eo
-  transition-timing-function: ease-out
+  transition-timing-function: ease-out !important
 
 .transition-tf-l
-  transition-timing-function: linear
+  transition-timing-function: linear !important
 
 .transition-all
-  transition-property: all
+  transition-property: all !important

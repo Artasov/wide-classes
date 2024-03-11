@@ -1,13 +1,13 @@
-.h-min-content
+.h-min
   height: min-content !important
 
-.h-max-content
+.h-max
   height: max-content !important
 
-.w-min-content
+.w-min
   width: min-content !important
 
-.w-max-content
+.w-max
   width: max-content !important
 
 .w-100vw
@@ -22,11 +22,13 @@
 .max-h-100vh
   max-height: 100vh !important
 
-.max-w-100
-  max-width: 100% !important
+@for $i from 2 through 20
+  .max-w-#{5 * $i}
+    max-width: #{5 * $i + "% !important"}
 
-.max-h-100
-  max-height: 100% !important
+@for $i from 2 through 20
+  .max-h-#{5 * $i}
+    max-height: #{5 * $i + "% !important"}
 
 
 @for $i from 0 through 20

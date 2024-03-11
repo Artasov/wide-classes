@@ -5,7 +5,7 @@ window.addEventListener('load', function () {
     } else if ("msMaxTouchPoints" in navigator) {
         hasTouchScreen = navigator.msMaxTouchPoints > 0;
     } else {
-        var mQ = window.matchMedia && matchMedia("(pointer:coarse)");
+        let mQ = window.matchMedia && matchMedia("(pointer:coarse)");
         if (mQ && mQ.media === "(pointer:coarse)") {
             hasTouchScreen = !!mQ.matches;
         } else if ('ontouchstart' in window) {

@@ -16,19 +16,12 @@
 .h-100vh
   height: 100vh !important
 
-.max-w-100vw
+.mw-100vw
   max-width: 100vw !important
 
-.max-h-100vh
+.mh-100vh
   max-height: 100vh !important
 
-@for $i from 2 through 20
-  .max-w-#{5 * $i}
-    max-width: #{5 * $i + "% !important"}
-
-@for $i from 2 through 20
-  .max-h-#{5 * $i}
-    max-height: #{5 * $i + "% !important"}
 
 @for $i from 0 through 20
   .w-#{5 * $i}
@@ -38,10 +31,19 @@
   .h-#{5 * $i}
     height: (5 * $i) * 1% !important
 
+
 @for $i from 0 through 20
-  .max-w-#{50 * $i}px
+  .mw-#{50 * $i}px
     max-width: #{50 * $i}px !important
 
 @for $i from 0 through 20
-  .max-h-#{50 * $i}px
+  .mh-#{50 * $i}px
     max-height: #{50 * $i}px !important
+
+@for $i from 2 through 20
+  .mw-#{5 * $i}
+    max-width: #{5 * $i + "% !important"}
+
+@for $i from 2 through 20
+  .mh-#{5 * $i}
+    max-height: #{5 * $i + "% !important"}

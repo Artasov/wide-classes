@@ -10,6 +10,8 @@
 @import "classes/size"
 @import "classes/transition"
 @import "classes/grid"
+@import "classes/margins"
+@import "classes/paddings"
 
 
 button, input[type="submit"], input[type="reset"]
@@ -44,6 +46,15 @@ textarea, textarea:active, textarea:focus
     height: 0
   -ms-overflow-style: none
   overflow: -moz-scrollbars-none
+
+.outline-none
+  outline: none !important
+
+  &:focus
+    outline: none !important
+
+  &:focus-visible
+    outline: none !important
 
 ._pc
   .only_pc

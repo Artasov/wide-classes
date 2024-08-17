@@ -40,28 +40,54 @@
   .h-#{5 * $i}
     height: (5 * $i) * 1%
 
-
+// Max width
 @for $i from 0 through 40
-  .mw-#{50 * $i}px
+  .maxw-#{50 * $i}px
     max-width: #{50 * $i}px !important
 
 @for $i from 0 through 40
-  .mh-#{50 * $i}px
+  .maxh-#{50 * $i}px
     max-height: #{50 * $i}px !important
 
 @for $i from 2 through 20
-  .mw-#{5 * $i}
+  .maxw-#{5 * $i}
     max-width: #{5 * $i + "%"} !important
 
 @for $i from 2 through 20
-  .mh-#{5 * $i}
+  .maxh-#{5 * $i}
     max-height: #{5 * $i + "%"} !important
 
 
 @for $i from 2 through 20
-  .mw-#{5 * $i}vw
+  .maxw-#{5 * $i}vw
     max-width: #{5 * $i + "vw"} !important
 
 @for $i from 2 through 20
-  .mh-#{5 * $i}vh
+  .maxh-#{5 * $i}vh
     max-height: #{5 * $i + "vh"} !important
+
+// Min width
+@for $i from 0 through 40
+  .minw-#{50 * $i}px
+    min-width: #{50 * $i}px !important
+
+@for $i from 0 through 40
+  .minh-#{50 * $i}px
+    min-height: #{50 * $i}px !important
+
+@for $i from 2 through 20
+  .minw-#{5 * $i}
+    min-width: #{5 * $i + "%"} !important
+
+@for $i from 2 through 20
+  .minh-#{5 * $i}
+    min-height: #{5 * $i + "%"} !important
+
+
+@for $i from 2 through 20
+  .minw-#{5 * $i}vw
+    min-width: #{5 * $i + "vw"} !important
+
+@for $i from 2 through 20
+  .minh-#{5 * $i}vh
+    min-height: #{5 * $i + "vh"} !important

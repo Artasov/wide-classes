@@ -31,32 +31,32 @@
   .h-#{5 * $i}vh
     height: (5 * $i) * 1 + vh
 
+// Процентные шаги с шагом в 2%
+@for $i from 0 through 50
+  .w-#{2 * $i}
+    width: (2 * $i) * 1%
 
-@for $i from 0 through 20
-  .w-#{5 * $i}
-    width: (5 * $i) * 1%
-
-@for $i from 0 through 20
-  .h-#{5 * $i}
-    height: (5 * $i) * 1%
+@for $i from 0 through 50
+  .h-#{2 * $i}
+    height: (2 * $i) * 1%
 
 // Max width
-@for $i from 0 through 40
-  .maxw-#{50 * $i}px
-    max-width: #{50 * $i}px !important
+@for $i from 0 through 100
+  .maxw-#{10 * $i}px
+    max-width: #{10 * $i}px !important
 
-@for $i from 0 through 40
-  .maxh-#{50 * $i}px
-    max-height: #{50 * $i}px !important
+@for $i from 0 through 100
+  .maxh-#{10 * $i}px
+    max-height: #{10 * $i}px !important
 
-@for $i from 2 through 20
-  .maxw-#{5 * $i}
-    max-width: #{5 * $i + "%"} !important
+// Max width с шагом в 2%
+@for $i from 1 through 50
+  .maxw-#{2 * $i}
+    max-width: #{2 * $i + "%"} !important
 
-@for $i from 2 through 20
-  .maxh-#{5 * $i}
-    max-height: #{5 * $i + "%"} !important
-
+@for $i from 1 through 50
+  .maxh-#{2 * $i}
+    max-height: #{2 * $i + "%"} !important
 
 @for $i from 2 through 20
   .maxw-#{5 * $i}vw
@@ -67,22 +67,22 @@
     max-height: #{5 * $i + "vh"} !important
 
 // Min width
-@for $i from 0 through 40
-  .minw-#{50 * $i}px
-    min-width: #{50 * $i}px !important
+@for $i from 0 through 100
+  .minw-#{10 * $i}px
+    min-width: #{10 * $i}px !important
 
-@for $i from 0 through 40
-  .minh-#{50 * $i}px
-    min-height: #{50 * $i}px !important
+@for $i from 0 through 100
+  .minh-#{10 * $i}px
+    min-height: #{10 * $i}px !important
 
-@for $i from 2 through 20
-  .minw-#{5 * $i}
-    min-width: #{5 * $i + "%"} !important
+// Min width с шагом в 2%
+@for $i from 1 through 50
+  .minw-#{2 * $i}
+    min-width: #{2 * $i + "%"} !important
 
-@for $i from 2 through 20
-  .minh-#{5 * $i}
-    min-height: #{5 * $i + "%"} !important
-
+@for $i from 1 through 50
+  .minh-#{2 * $i}
+    min-height: #{2 * $i + "%"} !important
 
 @for $i from 2 through 20
   .minw-#{5 * $i}vw

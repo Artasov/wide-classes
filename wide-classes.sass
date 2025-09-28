@@ -1,6 +1,11 @@
-@import "classes/layout"
-@import "classes/transform"
+@use "sass/variables" as *
+@use "sass/mixins" as *
+@use "classes/layout"
+@use "classes/transform"
 
+// ===========================================
+// Utility Classes
+// ===========================================
 
 .tdn
   text-decoration: none
@@ -15,7 +20,6 @@
   overflow: -moz-scrollbars-none
   -webkit-overflow-scrolling: touch
 
-
 .disable-tap-select
   -webkit-tap-highlight-color: transparent
   user-select: none
@@ -28,13 +32,11 @@
   -moz-user-select: all !important
   -ms-user-select: all !important
 
-
 .enable-tap-select-text
   -webkit-tap-highlight-color: initial !important
   user-select: text !important
   -moz-user-select: text !important
   -ms-user-select: text !important
-
 
 .rotate360anim
   animation: rotate360 10s linear infinite

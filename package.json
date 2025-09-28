@@ -1,0 +1,30 @@
+{
+  "name": "wide-classes",
+  "version": "1.0.0",
+  "description": "Bootstrap add-on utility classes library",
+  "main": "wide-classes.css",
+  "scripts": {
+    "build": "sass wide-classes.sass wide-classes.css --style=expanded --source-map",
+    "build:min": "sass wide-classes.sass wide-classes.min.css --style=compressed",
+    "build:all": "npm run build && npm run build:min",
+    "watch": "sass --watch wide-classes.sass:wide-classes.css --style=expanded --source-map",
+    "clean": "rm -f wide-classes.css wide-classes.css.map wide-classes.min.css"
+  },
+  "keywords": [
+    "css",
+    "utility",
+    "classes",
+    "flexbox",
+    "bootstrap",
+    "sass"
+  ],
+  "author": "Artasov",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "1.93.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Artasov/wide-classes.git"
+  }
+}

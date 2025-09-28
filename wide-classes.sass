@@ -1,39 +1,9 @@
-@import "classes/text"
-@import "classes/bg"
 @import "classes/layout"
-@import "classes/border"
-@import "classes/position"
 @import "classes/transform"
-@import "classes/filter"
-@import "classes/shadow"
-@import "classes/hover"
-@import "classes/size"
-@import "classes/transition"
-@import "classes/grid"
-@import "classes/margins"
-@import "classes/paddings"
-@import "classes/text-colors"
-@import "classes/bg-colors"
 
 
 .tdn
   text-decoration: none
-
-.ratio-1-1
-  aspect-ratio: 1 / 1
-
-.ratio-2-1
-  aspect-ratio: 2 / 1
-
-.ratio-1-2
-  aspect-ratio: 1 / 2
-
-.ratio-16-9
-  aspect-ratio: 16 / 9
-
-.lh-1
-  line-height: 1rem
-
 
 .no-scrollbar
   &::-webkit-scrollbar
@@ -44,44 +14,6 @@
   -ms-overflow-style: none
   overflow: -moz-scrollbars-none
   -webkit-overflow-scrolling: touch
-
-.outline-none
-  outline: none !important
-
-  &:focus
-    outline: none !important
-
-  &:focus-visible
-    outline: none !important
-
-._pc
-  .only_pc
-    display: block !important
-
-._touch
-  .only_pc
-    display: none !important
-
-._pc
-  .only_touch
-    display: none !important
-
-._touch
-  .only_touch
-    display: block !important
-
-
-.backdrop-blur-10
-  transition: all 200ms ease
-  backdrop-filter: blur(10px) !important
-
-.backdrop-blur-20
-  transition: all 200ms ease
-  backdrop-filter: blur(20px) !important
-
-
-.cursor-pointer
-  cursor: pointer
 
 
 .disable-tap-select
@@ -103,8 +35,6 @@
   -moz-user-select: text !important
   -ms-user-select: text !important
 
-.pointer-events-none
-  pointer-events: none
 
 .rotate360anim
   animation: rotate360 10s linear infinite
@@ -114,28 +44,3 @@
     transform: rotate(0deg)
   100%
     transform: rotate(360deg)
-
-.divider-100
-  width: 100%
-  height: 1px
-  margin: 0 auto
-
-.divider-90
-  width: 90%
-  height: 1px
-  margin: 0 auto
-
-.divider-80
-  width: 80%
-  height: 1px
-  margin: 0 auto
-
-.divider-70
-  width: 70%
-  height: 1px
-  margin: 0 auto
-
-.divider-60
-  width: 60%
-  height: 1px
-  margin: 0 auto

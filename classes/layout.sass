@@ -1,183 +1,103 @@
+@use '../sass/variables' as *
+@use '../sass/mixins' as *
+
+// Basic flexbox classes
 .fr
-  display: flex
-  flex-direction: row
+  +flexbox($flex-row, $justify-start, $align-start)
 
 .fc
-  display: flex
-  flex-direction: column
+  +flexbox($flex-column, $justify-start, $align-start)
 
 .fcc
-  display: flex
-  flex-direction: column
-  justify-content: center
+  +flexbox($flex-column, $justify-center, $align-start)
 
 .fcs
-  display: flex
-  flex-direction: column
-  justify-content: flex-start
+  +flexbox($flex-column, $justify-start, $align-start)
 
 .frs
-  display: flex
-  flex-direction: row
-  justify-content: flex-start
+  +flexbox($flex-row, $justify-start, $align-start)
 
 .fce
-  display: flex
-  flex-direction: column
-  justify-content: flex-end
+  +flexbox($flex-column, $justify-end, $align-start)
 
 .fre
-  display: flex
-  flex-direction: row
-  justify-content: flex-end
+  +flexbox($flex-row, $justify-end, $align-start)
 
 .fcb
-  display: flex
-  flex-direction: column
-  justify-content: space-between
+  +flexbox($flex-column, $justify-between, $align-start)
 
 .fca
-  display: flex
-  flex-direction: column
-  justify-content: space-around
+  +flexbox($flex-column, $justify-around, $align-start)
 
 .frc
-  display: flex
-  flex-direction: row
-  justify-content: center
+  +flexbox($flex-row, $justify-center, $align-start)
 
 .frb
-  display: flex !important
-  flex-direction: row !important
-  justify-content: space-between
+  +flexbox($flex-row, $justify-between, $align-start)
 
 .fra
-  display: flex !important
-  flex-direction: row !important
-  justify-content: space-around
+  +flexbox($flex-row, $justify-around, $align-start)
 
+// Complex flexbox classes with alignment
 .fccc
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
+  +flexbox($flex-column, $justify-center, $align-center)
 
 .fccs
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: flex-start
+  +flexbox($flex-column, $justify-center, $align-start)
 
 .frcs
-  display: flex
-  flex-direction: row
-  justify-content: center
-  align-items: flex-start
+  +flexbox($flex-row, $justify-center, $align-start)
 
 .frce
-  display: flex
-  flex-direction: row
-  justify-content: center
-  align-items: flex-end
+  +flexbox($flex-row, $justify-center, $align-end)
 
 .fcce
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: flex-end
+  +flexbox($flex-column, $justify-center, $align-end)
 
 .fcbc
-  display: flex
-  flex-direction: column
-  justify-content: space-between
-  align-items: center
+  +flexbox($flex-column, $justify-between, $align-center)
 
 .fcac
-  display: flex
-  flex-direction: column
-  justify-content: space-around
-  align-items: center
+  +flexbox($flex-column, $justify-around, $align-center)
 
 .frcc
-  display: flex
-  flex-direction: row
-  justify-content: center
-  align-items: center
+  +flexbox($flex-row, $justify-center, $align-center)
 
 .frbc
-  display: flex !important
-  flex-direction: row !important
-  justify-content: space-between
-  align-items: center
+  +flexbox($flex-row, $justify-between, $align-center)
 
 .frbs
-  display: flex !important
-  flex-direction: row !important
-  justify-content: space-between
-  align-items: flex-start
+  +flexbox($flex-row, $justify-between, $align-start)
 
 .frbe
-  display: flex !important
-  flex-direction: row !important
-  justify-content: space-between
-  align-items: flex-end
+  +flexbox($flex-row, $justify-between, $align-end)
 
 .frac
-  display: flex !important
-  flex-direction: row !important
-  justify-content: space-around
-  align-items: center
+  +flexbox($flex-row, $justify-around, $align-center)
 
 .fcsc
-  display: flex
-  flex-direction: column
-  justify-content: flex-start
-  align-items: center
+  +flexbox($flex-column, $justify-start, $align-center)
 
 .frsc
-  display: flex
-  flex-direction: row
-  justify-content: flex-start
-  align-items: center
+  +flexbox($flex-row, $justify-start, $align-center)
 
 .fcss
-  display: flex
-  flex-direction: column
-  justify-content: flex-start
-  align-items: flex-start
+  +flexbox($flex-column, $justify-start, $align-start)
 
 .frss
-  display: flex
-  flex-direction: row
-  justify-content: flex-start
-  align-items: flex-start
+  +flexbox($flex-row, $justify-start, $align-start)
 
 .fcse
-  display: flex
-  flex-direction: column
-  justify-content: flex-start
-  align-items: flex-end
+  +flexbox($flex-column, $justify-start, $align-end)
 
 .frse
-  display: flex
-  flex-direction: row
-  justify-content: flex-start
-  align-items: flex-end
+  +flexbox($flex-row, $justify-start, $align-end)
 
 .fcee
-  display: flex
-  flex-direction: column
-  justify-content: flex-end
-  align-items: flex-end
+  +flexbox($flex-column, $justify-end, $align-end)
 
 .fces
-  display: flex
-  flex-direction: column
-  justify-content: flex-end
-  align-items: flex-start
+  +flexbox($flex-column, $justify-end, $align-start)
 
 .free
-  display: flex
-  flex-direction: row
-  justify-content: flex-end
-  align-items: flex-end
+  +flexbox($flex-row, $justify-end, $align-end)

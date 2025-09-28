@@ -16,15 +16,6 @@
 @import "classes/bg-colors"
 
 
-button, input[type="submit"], input[type="reset"]
-  color: inherit
-  cursor: pointer
-
-ul, p
-  margin: 0
-  padding: 0
-  list-style: none
-
 .tdn
   text-decoration: none
 
@@ -43,16 +34,16 @@ ul, p
 .lh-1
   line-height: 1rem
 
-textarea, textarea:active, textarea:focus
-  &::placeholder
-    font-size: 1em !important
 
 .no-scrollbar
   &::-webkit-scrollbar
+    display: none
     width: 0
     height: 0
+  scrollbar-width: none
   -ms-overflow-style: none
   overflow: -moz-scrollbars-none
+  -webkit-overflow-scrolling: touch
 
 .outline-none
   outline: none !important
@@ -111,26 +102,6 @@ textarea, textarea:active, textarea:focus
   user-select: text !important
   -moz-user-select: text !important
   -ms-user-select: text !important
-
-//input:-webkit-autofill,
-//input:-webkit-autofill:hover,
-//input:-webkit-autofill:focus,
-//input:-webkit-autofill:active,
-//textarea:-webkit-autofill,
-//textarea:-webkit-autofill:hover,
-//textarea:-webkit-autofill:focus,
-//select:-webkit-autofill,
-//select:-webkit-autofill:hover,
-//select:-webkit-autofill:focus
-//  background-color: transparent
-//  -webkit-box-shadow: 0 0 0 0 transparent inset
-
-//input[type="password"]:-webkit-autofill,
-//input[type="password"]:-webkit-autofill:hover,
-//input[type="password"]:-webkit-autofill:focus,
-//input[type="password"]:-webkit-autofill:active
-//  background: transparent
-//  -webkit-box-shadow: 0 0 0 0 transparent inset
 
 .pointer-events-none
   pointer-events: none

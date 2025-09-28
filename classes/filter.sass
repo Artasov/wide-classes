@@ -1,3 +1,10 @@
 @for $i from 0 through 20
   .invert-#{5 * $i}
     filter: invert((5 * $i) * 1%)
+
+
+.safe-invert-09
+  filter: invert(.9) hue-rotate(180deg)
+
+  img, video, svg
+    filter: invert(1) hue-rotate(180deg)

@@ -5,7 +5,7 @@ $screens: (
         md: 768px,
         lg: 1024px,
         xl: 1280px,
-        xxl: 1536px
+        '2xl': 1536px
 ) !default;
 
 $flex-directions: (
@@ -34,13 +34,20 @@ $align-map: (
 );
 
 // helpers
+@function _escape-bp($bp) {
+  @if $bp == '2xl' {
+    @return '\\32xl';
+  }
+  @return $bp;
+}
+
 @mixin responsive-class($class) {
   .#{$class} {
     @content;
   }
   @each $bp, $width in $screens {
     @media (min-width: $width) {
-      .#{$bp}\:#{$class} {
+      .#{_escape-bp($bp)}\:#{$class} {
         @content;
       }
     }

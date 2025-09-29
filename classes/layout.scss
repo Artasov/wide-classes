@@ -1,3 +1,5 @@
+@use 'sass:string';
+
 $flex-directions: (
         'r': row,
         'c': column
@@ -28,17 +30,17 @@ $align-map: (
   @if $seg == '' {
     @return $base;
   }
-  $b-last: str-slice($base, -1);
-  $s-first: str-slice($seg, 1, 1);
+  $b-last: string.slice($base, -1);
+  $s-first: string.slice($seg, 1, 1);
   @if $b-last == '-' and $s-first == '-' {
-    @return $base + str-slice($seg, 2);
+    @return $base + string.slice($seg, 2);
   }
   @return $base + $seg;
 }
 
 @function _trim-trailing-dash($s) {
-  @if str-slice($s, -1) == '-' {
-    @return str-slice($s, 1, -2);
+  @if string.slice($s, -1) == '-' {
+    @return string.slice($s, 1, -2);
   }
   @return $s;
 }

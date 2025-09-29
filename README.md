@@ -1,74 +1,66 @@
 # Wide Classes
 
-<img height="85" src="img/logo.png" width="85" alt="Wide Classes Logo"/>
+<img height="78" src="img/logo.png" width="78" alt="Wide Classes Logo"/>
 
 <h1 style="margin: 0;">
     <a target="_blank" href="https://artasov.github.io/wide-classes/">DOCS</a>
 </h1>
 
-> Библиотека утилитарных CSS классов для лучшего опыта в layout
+### Utility CSS classes library for better layout experience
+> Supported breakpoints: `xs`, `sm`, `md`, `lg`, `xl`, `2xl` similar to tailwind
 
-## 🚀 Быстрый старт
+## 🚀 Quick Start
 
-### Установка
+### Download the latest [release](https://github.com/Artasov/wide-classes/releases/latest) and include in your project
+```html
+<link rel="stylesheet" href="wide-classes.min.css">
+```
+
+
+### For modifications and rebuilding
 ```bash
-# Клонировать репозиторий
+# Clone repository
 git clone https://github.com/Artasov/wide-classes.git
 cd wide-classes
 
-# Установить зависимости
+# Install dependencies
 npm install
 ```
 
-### Сборка
-```bash
-# Разработка (с source maps)
-npm run build
-
-# Продакшн (минифицированный)
+### Build
+```bash 
+# Production
 npm run build:min
 
-# Следить за изменениями
+# Watch for changes
 npm run watch
 
-# Очистить файлы
+# Clean files
 npm run clean
 ```
 
-### Использование
-```html
-<link rel="stylesheet" href="wide-classes.css">
-```
-
-## 📖 Документация
-
-- [Онлайн документация](https://artasov.github.io/wide-classes/)
-- [AGENTS.md](AGENTS.md) - Архитектура проекта
-
-## 🛠 Разработка
-
-### Структура проекта
+### Project structure
 ```
 wide-classes/
-├── sass/                    # SASS исходники
-│   ├── _variables.sass     # Переменные
-│   └── _mixins.sass        # Миксины
-├── classes/                # Модули классов
-│   ├── layout.sass         # Flexbox классы
-│   └── transform.sass      # Transform классы
-├── wide-classes.sass       # Главный файл
-└── wide-classes.css        # Скомпилированный CSS
+├── sass/                   # SASS sources
+│   ├── _variables.sass     # Variables
+│   └── _mixins.sass        # Mixins
+├── classes/                # Class modules
+│   ├── layout.sass         # Flexbox classes
+│   └── transform.sass      # Transform classes
+├── wide-classes.sass       # Main file
+└── wide-classes.min.css    # Compiled CSS
 ```
 
-### Команды npm
+### npm commands
 ```bash
-npm install    # Установить зависимости
-npm run build # Собрать CSS (expanded)
-npm run build:min # Собрать CSS (minified)
-npm run watch  # Следить за изменениями
-npm run clean  # Очистить файлы
+npm install    # Install dependencies
+npm run build # Build CSS (expanded)
+npm run build:min # Build CSS (minified)
+npm run watch  # Watch for changes
+npm run clean  # Clean files
 ```
 
-## 📄 Лицензия
+## 📄 License
 
 MIT License

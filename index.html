@@ -1,490 +1,825 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wide Classes - Best Layout</title>
-    <meta name="description" content="Wide Classes - utility CSS classes library for Bootstrap">
-    <meta name="keywords" content="css, utility, classes, flexbox, bootstrap, sass">
-    <meta name="author" content="Artasov">
+    <meta
+      name="description"
+      content="Wide Classes - utility CSS classes library for Bootstrap"
+    />
+    <meta
+      name="keywords"
+      content="css, utility, classes, flexbox, bootstrap, sass"
+    />
+    <meta name="author" content="Artasov" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="icon" type="image/png" href="img/logo.png" />
 
     <!-- Stylesheets -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="wide-classes.css">
+    <link rel="stylesheet" href="wide-classes.min.css" />
 
     <style>
-        body {
-            background: linear-gradient(135deg, #0f0f23 0%, #141424 50%, #121b32 100%);
-            min-height: 100vh;
-        }
+      body {
+        background: linear-gradient(
+          135deg,
+          #0f0f23 0%,
+          #141424 50%,
+          #121b32 100%
+        );
+        min-height: 100vh;
+      }
 
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
 
-        .gradient-text {
-            background: linear-gradient(45deg, #00aeff, #6b89ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+      .gradient-text {
+        background: linear-gradient(45deg, #00aeff, #6b89ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
 
-        .card-hover {
-            transition: all 0.4s ease;
-        }
+      .card-hover {
+        transition: all 0.4s ease;
+      }
 
-        .card-hover:hover {
-            box-shadow: 0 4px 15px rgba(0, 128, 255, 0.2);
-        }
+      .card-hover:hover {
+        box-shadow: 0 4px 15px rgba(0, 128, 255, 0.2);
+      }
 
-        .card-hover-layout {
-            transition: all 0.4s ease;
-        }
+      .card-hover-layout {
+        transition: all 0.4s ease;
+      }
 
-        .card-hover-layout:hover {
-            box-shadow: 0 4px 15px rgba(0, 174, 255, 0.25);
-        }
+      .card-hover-layout:hover {
+        box-shadow: 0 4px 15px rgba(0, 174, 255, 0.25);
+      }
 
-        .card-hover-willneed {
-            transition: all 0.4s ease;
-        }
+      .card-hover-willneed {
+        transition: all 0.4s ease;
+      }
 
-        .card-hover-willneed:hover {
-            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.25);
-        }
+      .card-hover-willneed:hover {
+        box-shadow: 0 4px 15px rgba(139, 92, 246, 0.25);
+      }
 
-        .card-hover-transform {
-            transition: all 0.4s ease;
-        }
+      .card-hover-transform {
+        transition: all 0.4s ease;
+      }
 
-        .card-hover-transform:hover {
-            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.25);
-        }
+      .card-hover-transform:hover {
+        box-shadow: 0 4px 15px rgba(245, 158, 11, 0.25);
+      }
 
-        .badge-glow {
-            box-shadow: 0 0 10px rgba(0, 174, 255, 0.3);
-        }
+      .badge-glow {
+        box-shadow: 0 0 10px rgba(0, 174, 255, 0.3);
+      }
 
-        .gradient-badge-layout {
-            background: linear-gradient(45deg, #00aeff, #6b89ff);
-        }
+      .gradient-badge-layout {
+        background: linear-gradient(45deg, #00aeff, #6b89ff);
+      }
 
-        .gradient-badge-willneed {
-            background: linear-gradient(45deg, #8b5cf6, #ec4899);
-        }
+      .gradient-badge-willneed {
+        background: linear-gradient(45deg, #8b5cf6, #ec4899);
+      }
 
-        .gradient-badge-transform {
-            background: linear-gradient(45deg, #f59e0b, #ef4444);
-        }
+      .gradient-badge-transform {
+        background: linear-gradient(45deg, #f59e0b, #ef4444);
+      }
 
-        .gradient-button {
-            background: linear-gradient(45deg, #00aeff, #6b89ff);
-        }
+      .gradient-button {
+        background: linear-gradient(45deg, #00aeff, #6b89ff);
+      }
     </style>
-</head>
-<body class="text-gray-100">
-<header class="frc py-6 glass-effect border-b border-gray-700">
-    <h1 class="frcc m-0 text-4xl font-bold gap-2">
-        <span class="logo rounded-full
-            pt-[3px] pb-2 px-4
-            frcc gradient-badge-layout text-white font-black
-            shadow-lg badge-glow">Wide
+  </head>
+  <body class="text-gray-100">
+    <header class="frc py-6 glass-effect border-b border-gray-700">
+      <h1 class="frcc m-0 text-4xl font-bold gap-2">
+        <span
+          class="logo rounded-full pt-[3px] pb-2 px-4 frcc gradient-badge-layout text-white font-black shadow-lg badge-glow"
+          >Wide
         </span>
         <span class="gradient-text leading-[2.6rem]">Classes</span>
-    </h1>
-</header>
-<main class="mt-8 mx-auto fcsc gap-6 pb-8 px-3 sm:px-4 disable-tap-select" style="max-width: 800px;">
-    <section class="fcsc w-full glass-effect rounded-2xl p-4 sm:p-8 card-hover" aria-labelledby="intro-heading">
-        <h2 id="intro-heading" class="text-center font-bold text-3xl gradient-text">
-            Tailwind / Bootstrap Addon
+      </h1>
+    </header>
+    <main
+      class="mt-8 mx-auto fcsc gap-6 pb-8 px-3 sm:px-4 disable-tap-select"
+      style="max-width: 800px"
+    >
+      <section
+        class="fcsc w-full glass-effect rounded-2xl p-4 sm:p-8 card-hover"
+        aria-labelledby="intro-heading"
+      >
+        <h2
+          id="intro-heading"
+          class="text-center font-bold text-3xl gradient-text"
+        >
+          Tailwind / Bootstrap Addon
         </h2>
         <p class="text-center text-gray-300 text-lg leading-relaxed">
-            Often there is not enough logic that we need, especially for Layout.<br>
-            And here it is - <i class="gradient-text font-semibold">the solution</i>.
+          Often there is not enough logic that we need, especially for
+          Layout.<br />
+          And here it is -
+          <i class="gradient-text font-semibold">the solution</i>.
         </p>
 
-        <a href="https://github.com/Artasov/wide-classes" target="_blank" rel="noopener noreferrer"
-           class="text-xl self-center gradient-button text-white font-bold px-6 py-3 mt-3 rounded-full hover:shadow-lg hover:shadow-blue-400/25 transition-all duration-300 cursor-pointer">
-            GitHub
+        <a
+          href="https://github.com/Artasov/wide-classes"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-xl self-center gradient-button text-white font-bold px-6 py-3 mt-3 rounded-full hover:shadow-lg hover:shadow-blue-400/25 transition-all duration-300 cursor-pointer"
+        >
+          GitHub
         </a>
-    </section>
+      </section>
 
-
-    <section class="glass-effect rounded-2xl p-3 sm:p-6 card-hover">
+      <section class="glass-effect rounded-2xl p-3 sm:p-6 card-hover">
         <div>
-            <div class="fc w-full">
-                <h3 class="font-bold text-2xl mb-4 gradient-text">
-                    Usage
-                </h3>
-                <p class="ps-0 sm:ps-4 text-gray-300 text-lg">Just download
-                    <a target="_blank" href="https://github.com/Artasov/wide-classes/blob/main/wide-classes.css"
-                       class="underline text-cyan-400 font-bold hover:text-emerald-400 transition-colors duration-300"
-                       style="letter-spacing: 0.07rem">
-                        wide-classes.css</a> and include it in your html.</p>
-            </div>
-            <div class="h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent mb-4 mt-6"></div>
-            <div>
-                <h4 class="font-bold text-xl mb-4 gradient-text" id="Layout">Layout</h4>
+          <div class="fc w-full">
+            <h3 class="font-bold text-2xl mb-4 gradient-text">Usage</h3>
+            <p class="ps-0 sm:ps-4 text-gray-300 text-lg">
+              Just download
+              <a
+                target="_blank"
+                href="https://github.com/Artasov/wide-classes/blob/main/wide-classes.css"
+                class="underline text-cyan-400 font-bold hover:text-emerald-400 transition-colors duration-300"
+                style="letter-spacing: 0.07rem"
+              >
+                wide-classes.css</a
+              >
+              and include it in your html.
+            </p>
+          </div>
+          <div
+            class="h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent mb-4 mt-6"
+          ></div>
+          <div>
+            <h4 class="font-bold text-xl mb-4 gradient-text" id="Layout">
+              Layout
+            </h4>
 
-                <div class="glass-effect rounded-lg p-4 mb-4 card-hover-layout w-fit">
-                    <div class="text-sm text-gray-300 leading-relaxed">
-                        <p class="mb-2"><strong class="gradient-text">Class structure:</strong> <code
-                                class="text-cyan-400">f{flexDirection}{justifyContent}{alignItems}</code></p>
-                        <div class="frs gap-4 text-xs">
-                            <div>
-                                <strong>flex-direction:</strong><br>
-                                <span class="text-cyan-400">r</span> → row<br>
-                                <span class="text-cyan-400">c</span> → column
-                            </div>
-                            <div>
-                                <strong>justify-content:</strong><br>
-                                <span class="text-cyan-400">c</span> → center<br>
-                                <span class="text-cyan-400">s</span> → start<br>
-                                <span class="text-cyan-400">e</span> → end<br>
-                                <span class="text-cyan-400">b</span> → between<br>
-                                <span class="text-cyan-400">a</span> → around<br>
-                                <span class="text-cyan-400">ev</span> → evenly<br>
-                                <span class="text-cyan-400">st</span> → stretch
-                            </div>
-                            <div>
-                                <strong>align-items:</strong><br>
-                                <span class="text-cyan-400">c</span> → center<br>
-                                <span class="text-cyan-400">s</span> → start<br>
-                                <span class="text-cyan-400">e</span> → end<br>
-                                <span class="text-cyan-400">b</span> → baseline<br>
-                                <span class="text-cyan-400">st</span> → stretch
-                            </div>
-                        </div>
-                        <p class="mt-2 text-xs text-gray-400">Values <code>ev</code> and <code>st</code> are highlighted
-                            with dashes: <code>fr-ev-c</code>, <code>fc-st</code></p>
-                    </div>
+            <div
+              class="glass-effect rounded-lg p-4 mb-4 card-hover-layout w-fit"
+            >
+              <div class="text-sm text-gray-300 leading-relaxed">
+                <p class="mb-2">
+                  <strong class="gradient-text">Class structure:</strong>
+                  <code class="text-cyan-400"
+                    >f{flexDirection}{justifyContent}{alignItems}</code
+                  >
+                </p>
+                <div class="frs gap-4 text-xs">
+                  <div>
+                    <strong>flex-direction:</strong><br />
+                    <span class="text-cyan-400">r</span> → row<br />
+                    <span class="text-cyan-400">c</span> → column
+                  </div>
+                  <div>
+                    <strong>justify-content:</strong><br />
+                    <span class="text-cyan-400">c</span> → center<br />
+                    <span class="text-cyan-400">s</span> → start<br />
+                    <span class="text-cyan-400">e</span> → end<br />
+                    <span class="text-cyan-400">b</span> → between<br />
+                    <span class="text-cyan-400">a</span> → around<br />
+                    <span class="text-cyan-400">ev</span> → evenly<br />
+                    <span class="text-cyan-400">st</span> → stretch
+                  </div>
+                  <div>
+                    <strong>align-items:</strong><br />
+                    <span class="text-cyan-400">c</span> → center<br />
+                    <span class="text-cyan-400">s</span> → start<br />
+                    <span class="text-cyan-400">e</span> → end<br />
+                    <span class="text-cyan-400">b</span> → baseline<br />
+                    <span class="text-cyan-400">st</span> → stretch
+                  </div>
                 </div>
-
-                <ul class="text-lg frsc gap-3 flex-wrap">
-                    <li class="glass-effect rounded-lg p-3 card-hover-layout">
-                        <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">
-                            fccc
-                        </span>
-                        <div class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300">
-                            <span>display: flex</span>
-                            <span>flex-direction: column</span>
-                            <span>justify-content: center</span>
-                            <span>align-items: center</span>
-                        </div>
-                    </li>
-
-                    <li class="glass-effect rounded-lg p-3 card-hover-layout">
-                        <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">
-                            frcc
-                        </span>
-                        <div class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300">
-                            <span>display: flex</span>
-                            <span>flex-direction: row</span>
-                            <span>justify-content: center</span>
-                            <span>align-items: center</span>
-                        </div>
-                    </li>
-
-                    <li class="glass-effect rounded-lg p-3 card-hover-layout">
-                        <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">
-                            frsc
-                        </span>
-                        <div class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300">
-                            <span>display: flex</span>
-                            <span>flex-direction: row</span>
-                            <span>justify-content: start</span>
-                            <span>align-items: center</span>
-                        </div>
-                    </li>
-
-                    <li class="glass-effect rounded-lg p-3 card-hover-layout">
-                        <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">
-                            fcbc
-                        </span>
-                        <div class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300">
-                            <span>display: flex</span>
-                            <span>flex-direction: column</span>
-                            <span>justify-content: space-between</span>
-                            <span>align-items: center</span>
-                        </div>
-                    </li>
-
-                    <li class="glass-effect rounded-lg p-3 card-hover-layout">
-                        <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">
-                            frac
-                        </span>
-                        <div class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300">
-                            <span>display: flex</span>
-                            <span>flex-direction: row</span>
-                            <span>justify-content: space-around</span>
-                            <span>align-items: center</span>
-                        </div>
-                    </li>
-
-                    <li class="glass-effect rounded-lg p-4 card-hover-layout">
-                        <span class="font-bold text-lg gradient-text">All</span>
-                        <div class="frs gap-2 flex-wrap mt-2">
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fc</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fr</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fca</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fcb</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fcc</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fce</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fcs</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fra</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">frb</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">frc</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fre</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">frs</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fcab</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fcac</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fcae</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fcas</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fcbb</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fcbc</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fcbe</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fcbs</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fccb</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fccc</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fcce</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fccs</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fceb</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fcec</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fcee</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fces</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fcsb</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fcsc</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fcse</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fcss</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">frab</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">frac</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">frae</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fras</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">frbb</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">frbc</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">frbe</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">frbs</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">frcb</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">frcc</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">frce</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">frcs</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">freb</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">frec</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">free</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fres</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">frsb</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">frsc</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">frse</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">frss</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fc-ev</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fc-st</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fr-ev</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fr-st</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fca-st</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fcb-st</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fcc-st</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fce-st</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fcs-st</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fra-st</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">frb-st</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">frc-st</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fre-st</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">frs-st</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fc-ev-b</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fc-ev-c</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fc-ev-e</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fc-ev-s</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fc-st-b</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fc-st-c</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fc-st-e</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fc-st-s</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fr-ev-b</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fr-ev-c</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fr-ev-e</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fr-ev-s</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fr-st-b</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fr-st-c</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fr-st-e</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fr-st-s</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fc-ev-st</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fc-st-st</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fr-ev-st</span>
-                            <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">fr-st-st</span>
-                        </div>
-                    </li>
-                </ul>
+                <p class="mt-2 text-xs text-gray-400">
+                  Values <code>ev</code> and <code>st</code> are highlighted
+                  with dashes: <code>fr-ev-c</code>, <code>fc-st</code>
+                </p>
+              </div>
             </div>
 
-            <div class="h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent mb-4 mt-6"></div>
+            <ul class="text-lg frsc gap-3 flex-wrap">
+              <li class="glass-effect rounded-lg p-3 card-hover-layout">
+                <span
+                  class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                >
+                  fccc
+                </span>
+                <div
+                  class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300"
+                >
+                  <span>display: flex</span>
+                  <span>flex-direction: column</span>
+                  <span>justify-content: center</span>
+                  <span>align-items: center</span>
+                </div>
+              </li>
 
-            <div>
-                <h4 class="font-bold text-xl mb-4 gradient-text" id="Will-need">Will need</h4>
-                <ul class="text-lg fc gap-3 flex-wrap">
-                    <li class="glass-effect rounded-lg p-3 card-hover-willneed">
-                        <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-willneed text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">no-scrollbar</span>
-                        <div class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300">
-                            <span>Does not disable scrolling, just hides the scrollbar.</span>
-                        </div>
-                    </li>
-                    <li class="glass-effect rounded-lg p-3 card-hover-willneed">
-                        <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-willneed text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">disable-tap-select</span>
-                        <div class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300">
-                            <span>Disables touch highlighting and text selection.</span>
-                        </div>
-                    </li>
-                    <li class="glass-effect rounded-lg p-3 card-hover-willneed">
-                        <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-willneed text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">enable-tap-select-text</span>
-                        <div class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300">
-                            <span>Enables touch highlighting and text selection.</span>
-                        </div>
-                    </li>
-                    <li class="glass-effect rounded-lg p-3 card-hover-willneed">
-                        <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-willneed text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">enable-tap-select-all</span>
-                        <div class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300">
-                            <span>Enables touch highlighting and selection of all text.</span>
-                            <span>user-select: all</span>
-                        </div>
-                    </li>
-                    <li class="glass-effect rounded-lg p-3 card-hover-willneed">
-                        <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-willneed text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">tdn</span>
-                        <div class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300">
-                            <span>text-decoration: none</span>
-                        </div>
-                    </li>
-                    <li class="glass-effect rounded-lg p-3 card-hover-willneed">
-                        <span class="font-bold text-sm badge enable-tap-select-all
-                            gradient-badge-willneed text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">rotate360anim</span>
-                        <div class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300">
-                            <span>360-degree rotation animation</span>
-                        </div>
-                    </li>
-                </ul>
+              <li class="glass-effect rounded-lg p-3 card-hover-layout">
+                <span
+                  class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                >
+                  frcc
+                </span>
+                <div
+                  class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300"
+                >
+                  <span>display: flex</span>
+                  <span>flex-direction: row</span>
+                  <span>justify-content: center</span>
+                  <span>align-items: center</span>
+                </div>
+              </li>
+
+              <li class="glass-effect rounded-lg p-3 card-hover-layout">
+                <span
+                  class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                >
+                  frsc
+                </span>
+                <div
+                  class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300"
+                >
+                  <span>display: flex</span>
+                  <span>flex-direction: row</span>
+                  <span>justify-content: start</span>
+                  <span>align-items: center</span>
+                </div>
+              </li>
+
+              <li class="glass-effect rounded-lg p-3 card-hover-layout">
+                <span
+                  class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                >
+                  fcbc
+                </span>
+                <div
+                  class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300"
+                >
+                  <span>display: flex</span>
+                  <span>flex-direction: column</span>
+                  <span>justify-content: space-between</span>
+                  <span>align-items: center</span>
+                </div>
+              </li>
+
+              <li class="glass-effect rounded-lg p-3 card-hover-layout">
+                <span
+                  class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                >
+                  frac
+                </span>
+                <div
+                  class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300"
+                >
+                  <span>display: flex</span>
+                  <span>flex-direction: row</span>
+                  <span>justify-content: space-around</span>
+                  <span>align-items: center</span>
+                </div>
+              </li>
+
+              <li class="glass-effect rounded-lg p-3 card-hover-layout">
+                <span
+                  class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                >
+                  sm:frcc
+                </span>
+                <div
+                  class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300"
+                >
+                  <span>@media (min-width: 640px)</span>
+                  <span>display: flex</span>
+                  <span>flex-direction: row</span>
+                  <span>justify-content: center</span>
+                  <span>align-items: center</span>
+                </div>
+              </li>
+
+              <li class="glass-effect rounded-lg p-3 card-hover-layout">
+                <span
+                  class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                >
+                  lg:fc-st
+                </span>
+                <div
+                  class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300"
+                >
+                  <span>@media (min-width: 1024px)</span>
+                  <span>display: flex</span>
+                  <span>flex-direction: column</span>
+                  <span>justify-content: stretch</span>
+                </div>
+              </li>
+
+              <li class="glass-effect rounded-lg p-4 card-hover-layout">
+                <span class="font-bold text-lg gradient-text">All</span>
+                <div class="frs gap-2 flex-wrap mt-2">
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fc</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fr</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fca</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fcb</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fcc</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fce</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fcs</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fra</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >frb</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >frc</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fre</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >frs</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fcab</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fcac</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fcae</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fcas</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fcbb</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fcbc</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fcbe</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fcbs</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fccb</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fccc</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fcce</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fccs</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fceb</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fcec</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fcee</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fces</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fcsb</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fcsc</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fcse</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fcss</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >frab</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >frac</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >frae</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fras</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >frbb</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >frbc</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >frbe</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >frbs</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >frcb</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >frcc</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >frce</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >frcs</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >freb</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >frec</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >free</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fres</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >frsb</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >frsc</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >frse</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >frss</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fc-ev</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fc-st</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fr-ev</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fr-st</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fca-st</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fcb-st</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fcc-st</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fce-st</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fcs-st</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fra-st</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >frb-st</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >frc-st</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fre-st</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >frs-st</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fc-ev-b</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fc-ev-c</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fc-ev-e</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fc-ev-s</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fc-st-b</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fc-st-c</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fc-st-e</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fc-st-s</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fr-ev-b</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fr-ev-c</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fr-ev-e</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fr-ev-s</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fr-st-b</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fr-st-c</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fr-st-e</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fr-st-s</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fc-ev-st</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fc-st-st</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fr-ev-st</span
+                  >
+                  <span
+                    class="font-bold text-sm badge enable-tap-select-all gradient-badge-layout text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                    >fr-st-st</span
+                  >
+                </div>
+              </li>
+            </ul>
+
+            <div class="glass-effect mt-3 rounded-lg p-4 mb-4 card-hover-layout w-fit">
+              <div class="text-sm text-gray-300 leading-relaxed">
+                <p class="mb-2">
+                  <strong class="gradient-text">Responsive breakpoints:</strong>
+                </p>
+                <div class="frs gap-4 text-xs flex-wrap">
+                  <div>
+                    <strong>Breakpoint:</strong><br />
+                    <span class="text-cyan-400">sm:</span> 640px<br />
+                    <span class="text-cyan-400">md:</span> 768px<br />
+                    <span class="text-cyan-400">lg:</span> 1024px<br />
+                    <span class="text-cyan-400">xl:</span> 1280px<br />
+                    <span class="text-cyan-400">2xl:</span> 1536px
+                  </div>
+                  <div>
+                    <strong>Usage:</strong><br />
+                    <code class="text-cyan-400">sm:frcc</code><br />
+                    <code class="text-cyan-400">md:fcbc</code><br />
+                    <code class="text-cyan-400">lg:frsc</code><br />
+                    <code class="text-cyan-400">xl:fc-st</code><br />
+                    <code class="text-cyan-400">2xl:fr-ev-c</code>
+                  </div>
+                </div>
+                <p class="mt-2 text-xs text-gray-400">
+                  All layout classes support responsive prefixes. Use
+                  <code>breakpoint:class</code> format.
+                </p>
+              </div>
             </div>
+          </div>
 
+          <div
+            class="h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent mb-4 mt-6"
+          ></div>
 
-            <div class="h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent mb-4 mt-6"></div>
+          <div>
+            <h4 class="font-bold text-xl mb-4 gradient-text" id="Will-need">
+              Will need
+            </h4>
+            <ul class="text-lg fc gap-3 flex-wrap">
+              <li class="glass-effect rounded-lg p-3 card-hover-willneed">
+                <span
+                  class="font-bold text-sm badge enable-tap-select-all gradient-badge-willneed text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                  >no-scrollbar</span
+                >
+                <div
+                  class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300"
+                >
+                  <span
+                    >Does not disable scrolling, just hides the scrollbar.</span
+                  >
+                </div>
+              </li>
+              <li class="glass-effect rounded-lg p-3 card-hover-willneed">
+                <span
+                  class="font-bold text-sm badge enable-tap-select-all gradient-badge-willneed text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                  >disable-tap-select</span
+                >
+                <div
+                  class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300"
+                >
+                  <span>Disables touch highlighting and text selection.</span>
+                </div>
+              </li>
+              <li class="glass-effect rounded-lg p-3 card-hover-willneed">
+                <span
+                  class="font-bold text-sm badge enable-tap-select-all gradient-badge-willneed text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                  >enable-tap-select-text</span
+                >
+                <div
+                  class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300"
+                >
+                  <span>Enables touch highlighting and text selection.</span>
+                </div>
+              </li>
+              <li class="glass-effect rounded-lg p-3 card-hover-willneed">
+                <span
+                  class="font-bold text-sm badge enable-tap-select-all gradient-badge-willneed text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                  >enable-tap-select-all</span
+                >
+                <div
+                  class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300"
+                >
+                  <span
+                    >Enables touch highlighting and selection of all text.</span
+                  >
+                  <span>user-select: all</span>
+                </div>
+              </li>
+              <li class="glass-effect rounded-lg p-3 card-hover-willneed">
+                <span
+                  class="font-bold text-sm badge enable-tap-select-all gradient-badge-willneed text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                  >tdn</span
+                >
+                <div
+                  class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300"
+                >
+                  <span>text-decoration: none</span>
+                </div>
+              </li>
+              <li class="glass-effect rounded-lg p-3 card-hover-willneed">
+                <span
+                  class="font-bold text-sm badge enable-tap-select-all gradient-badge-willneed text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                  >rotate360anim</span
+                >
+                <div
+                  class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300"
+                >
+                  <span>360-degree rotation animation</span>
+                </div>
+              </li>
+            </ul>
+          </div>
 
-            <div>
-                <h4 class="font-bold text-xl mb-4 gradient-text" id="Transform">Transform</h4>
-                <ul class="text-lg frsc gap-3 flex-wrap">
-                    <li class="glass-effect rounded-lg p-3 card-hover-transform">
-                        <span class="font-bold text-sm badge enable-tap-select-all-all gradient-badge-transform text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">invert-w</span>
-                        <div class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300">
-                            <span>transform: scaleX(-1)</span>
-                        </div>
-                    </li>
-                    <li class="glass-effect rounded-lg p-3 card-hover-transform">
-                        <span class="font-bold text-sm badge enable-tap-select-all-all gradient-badge-transform text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow">invert-h</span>
-                        <div class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300">
-                            <span>transform: scaleY(-1)</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+          <div
+            class="h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent mb-4 mt-6"
+          ></div>
 
+          <div>
+            <h4 class="font-bold text-xl mb-4 gradient-text" id="Transform">
+              Transform
+            </h4>
+            <ul class="text-lg frsc gap-3 flex-wrap">
+              <li class="glass-effect rounded-lg p-3 card-hover-transform">
+                <span
+                  class="font-bold text-sm badge enable-tap-select-all-all gradient-badge-transform text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                  >invert-w</span
+                >
+                <div
+                  class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300"
+                >
+                  <span>transform: scaleX(-1)</span>
+                </div>
+              </li>
+              <li class="glass-effect rounded-lg p-3 card-hover-transform">
+                <span
+                  class="font-bold text-sm badge enable-tap-select-all-all gradient-badge-transform text-white rounded-lg px-2 pb-[2px] pt-[1px] badge-glow"
+                  >invert-h</span
+                >
+                <div
+                  class="mt-2 text-sm fcc ps-2 leading-relaxed text-gray-300"
+                >
+                  <span>transform: scaleY(-1)</span>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-    </section>
-</main>
-</body>
+      </section>
+    </main>
+  </body>
 </html>

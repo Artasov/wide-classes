@@ -41,10 +41,15 @@ $align-map: (
   @return $bp;
 }
 
-@mixin responsive-class($class) {
+// emit a single base class
+@mixin emit-base($class) {
   .#{$class} {
     @content;
   }
+}
+
+// emit the responsive variants for a class (sm:, md:, ...)
+@mixin emit-responsive($class) {
   @each $bp, $width in $screens {
     @media (min-width: $width) {
       .#{_escape-bp($bp)}\:#{$class} {
@@ -100,26 +105,62 @@ $align-map: (
   @return _trim-trailing-dash($name);
 }
 
-// base: fr / fc
+//
+// Phase 1: emit ALL base classes first
+// This ensures base rules come before any responsive ones in the final CSS.
+//
 @each $fd-key, $fd-val in $flex-directions {
-  @include responsive-class(_build-class($fd-key, '', '')) {
+  @include emit-base(_build-class($fd-key, '', '')) {
     display: flex;
     flex-direction: $fd-val;
   }
 }
 
-// with justify (and optional align)
 @each $fd-key, $fd-val in $flex-directions {
   @each $j-key, $j-val in $justify-map {
     @if $j-key != '' {
-      @include responsive-class(_build-class($fd-key, $j-key, '')) {
+      @include emit-base(_build-class($fd-key, $j-key, '')) {
         display: flex;
         flex-direction: $fd-val;
         justify-content: $j-val;
       }
       @each $a-key, $a-val in $align-map {
         @if $a-key != '' {
-          @include responsive-class(_build-class($fd-key, $j-key, $a-key)) {
+          @include emit-base(_build-class($fd-key, $j-key, $a-key)) {
+            display: flex;
+            flex-direction: $fd-val;
+            justify-content: $j-val;
+            align-items: $a-val;
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+// Phase 2: emit ALL responsive variants after all base classes
+// This guarantees that classes like `sm:fc` override base-only classes like `frs`
+// when both apply at the same breakpoint.
+//
+@each $fd-key, $fd-val in $flex-directions {
+  @include emit-responsive(_build-class($fd-key, '', '')) {
+    display: flex;
+    flex-direction: $fd-val;
+  }
+}
+
+@each $fd-key, $fd-val in $flex-directions {
+  @each $j-key, $j-val in $justify-map {
+    @if $j-key != '' {
+      @include emit-responsive(_build-class($fd-key, $j-key, '')) {
+        display: flex;
+        flex-direction: $fd-val;
+        justify-content: $j-val;
+      }
+      @each $a-key, $a-val in $align-map {
+        @if $a-key != '' {
+          @include emit-responsive(_build-class($fd-key, $j-key, $a-key)) {
             display: flex;
             flex-direction: $fd-val;
             justify-content: $j-val;

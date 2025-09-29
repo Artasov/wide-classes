@@ -1,5 +1,13 @@
 @use 'sass:string';
 
+$screens: (
+        sm: 640px,
+        md: 768px,
+        lg: 1024px,
+        xl: 1280px,
+        xxl: 1536px
+) !default;
+
 $flex-directions: (
         'r': row,
         'c': column
@@ -26,6 +34,19 @@ $align-map: (
 );
 
 // helpers
+@mixin responsive-class($class) {
+  .#{$class} {
+    @content;
+  }
+  @each $bp, $width in $screens {
+    @media (min-width: $width) {
+      .#{$bp}\:#{$class} {
+        @content;
+      }
+    }
+  }
+}
+
 @function _append-seg($base, $seg) {
   @if $seg == '' {
     @return $base;
@@ -74,7 +95,7 @@ $align-map: (
 
 // base: fr / fc
 @each $fd-key, $fd-val in $flex-directions {
-  .#{_build-class($fd-key, '', '')} {
+  @include responsive-class(_build-class($fd-key, '', '')) {
     display: flex;
     flex-direction: $fd-val;
   }
@@ -84,14 +105,14 @@ $align-map: (
 @each $fd-key, $fd-val in $flex-directions {
   @each $j-key, $j-val in $justify-map {
     @if $j-key != '' {
-      .#{_build-class($fd-key, $j-key, '')} {
+      @include responsive-class(_build-class($fd-key, $j-key, '')) {
         display: flex;
         flex-direction: $fd-val;
         justify-content: $j-val;
       }
       @each $a-key, $a-val in $align-map {
         @if $a-key != '' {
-          .#{_build-class($fd-key, $j-key, $a-key)} {
+          @include responsive-class(_build-class($fd-key, $j-key, $a-key)) {
             display: flex;
             flex-direction: $fd-val;
             justify-content: $j-val;

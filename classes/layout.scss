@@ -1,0 +1,102 @@
+$flex-directions: (
+        'r': row,
+        'c': column
+);
+
+$justify-map: (
+        'c': center,
+        's': flex-start,
+        'e': flex-end,
+        'b': space-between,
+        'a': space-around,
+        'ev': space-evenly,
+        'st': stretch,
+        '': null
+);
+
+$align-map: (
+        'c': center,
+        's': flex-start,
+        'e': flex-end,
+        'b': baseline,
+        'st': stretch,
+        '': null
+);
+
+// helpers
+@function _append-seg($base, $seg) {
+  @if $seg == '' {
+    @return $base;
+  }
+  $b-last: str-slice($base, -1);
+  $s-first: str-slice($seg, 1, 1);
+  @if $b-last == '-' and $s-first == '-' {
+    @return $base + str-slice($seg, 2);
+  }
+  @return $base + $seg;
+}
+
+@function _trim-trailing-dash($s) {
+  @if str-slice($s, -1) == '-' {
+    @return str-slice($s, 1, -2);
+  }
+  @return $s;
+}
+
+@function _seg-justify($j) {
+  @if $j == '' {
+    @return '';
+  }
+  @if $j == 'ev' or $j == 'st' {
+    @return '-' + $j + '-';
+  }
+  @return $j;
+}
+
+@function _seg-align($a) {
+  @if $a == '' {
+    @return '';
+  }
+  @if $a == 'st' {
+    @return '-' + $a + '-';
+  }
+  @return $a;
+}
+
+@function _build-class($fd-key, $j-key, $a-key) {
+  $name: 'f' + $fd-key;
+  $name: _append-seg($name, _seg-justify($j-key));
+  $name: _append-seg($name, _seg-align($a-key));
+  @return _trim-trailing-dash($name);
+}
+
+// base: fr / fc
+@each $fd-key, $fd-val in $flex-directions {
+  .#{_build-class($fd-key, '', '')} {
+    display: flex;
+    flex-direction: $fd-val;
+  }
+}
+
+// with justify (and optional align)
+@each $fd-key, $fd-val in $flex-directions {
+  @each $j-key, $j-val in $justify-map {
+    @if $j-key != '' {
+      .#{_build-class($fd-key, $j-key, '')} {
+        display: flex;
+        flex-direction: $fd-val;
+        justify-content: $j-val;
+      }
+      @each $a-key, $a-val in $align-map {
+        @if $a-key != '' {
+          .#{_build-class($fd-key, $j-key, $a-key)} {
+            display: flex;
+            flex-direction: $fd-val;
+            justify-content: $j-val;
+            align-items: $a-val;
+          }
+        }
+      }
+    }
+  }
+}

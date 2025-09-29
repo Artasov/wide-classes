@@ -47,3 +47,68 @@ npm run watch
 - Отступы в 2 пробела
 - Комментарии для разделов
 - Семантические имена переменных
+
+# Layout классы
+
+Каждый класс layout начинается с `f` а дальше следующие части подставляются как:
+
+### `f{flexDirection}{justifyContent}{alignItems}`
+
+### 1. flex-direction
+
+* r → row
+* c → column
+
+### 2. justify-content
+
+* c → center
+* s → start
+* e → end
+* b → between
+* a → around
+* ev → evenly
+* st → stretch
+* '' → Пусто (не указывается)
+
+### 3. align-items
+
+* c → center
+* s → start
+* e → end
+* b → baseline
+* st → stretch
+* '' → Пусто (не указывается)
+
+Так `st` и `ev` значения могут сбивать с толку мы их выделяем в классе знаками `-`, по итогу у нас получаются вот такие
+классы:
+`fr` `fc` `fcsc` `frsc` `fce` `fc-st` `fr-ev-c` и т.д.
+
+Так можно сгенерировать все возможные комбинации:
+
+```python
+done_classes = set()
+for i in ('r', 'c'):
+    for j in ('c', 's', 'e', 'b', 'a', 'ev', 'st', ''):
+        for k in ('c', 's', 'e', 'b', 'st', ''):
+            cls = f'f{i}'
+            if not j:
+                done_classes.add(cls)
+                continue
+            if j in ('ev', 'st'):
+                cls += f'-{j}-'
+            else:
+                cls += j
+            if not k:
+                done_classes.add(cls.replace('--', '-').removesuffix('-'))
+                continue
+            if k == 'st':
+                cls += f'-{k}-'
+            else:
+                cls += k
+            done_classes.add(cls.replace('--', '-').removesuffix('-'))
+
+print(f'Количество классов: {len(done_classes)}')
+done_classes = sorted(done_classes, key=lambda x: (len(x), x))
+print('Полученные классы:')
+print(*done_classes, sep='\n')
+```
